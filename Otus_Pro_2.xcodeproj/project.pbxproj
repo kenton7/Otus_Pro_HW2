@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		091B2F152BA4F46C008AA663 /* WorkingWithAnimation2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091B2F142BA4F46C008AA663 /* WorkingWithAnimation2.swift */; };
 		091B2F172BA75829008AA663 /* Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091B2F162BA75829008AA663 /* Topics.swift */; };
 		091B2F1D2BA88B04008AA663 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091B2F1C2BA88B04008AA663 /* RowView.swift */; };
-		091B2F1F2BA9743A008AA663 /* WorkingWithAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091B2F1E2BA9743A008AA663 /* WorkingWithAnimation.swift */; };
 		09F7E19F2B7A7137000A2C68 /* Otus_Pro_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F7E19E2B7A7137000A2C68 /* Otus_Pro_2App.swift */; };
 		09F7E1A12B7A7137000A2C68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F7E1A02B7A7137000A2C68 /* ContentView.swift */; };
 		09F7E1A32B7A7139000A2C68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F7E1A22B7A7139000A2C68 /* Assets.xcassets */; };
@@ -33,10 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		091B2F142BA4F46C008AA663 /* WorkingWithAnimation2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingWithAnimation2.swift; sourceTree = "<group>"; };
 		091B2F162BA75829008AA663 /* Topics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topics.swift; sourceTree = "<group>"; };
 		091B2F1C2BA88B04008AA663 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
-		091B2F1E2BA9743A008AA663 /* WorkingWithAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingWithAnimation.swift; sourceTree = "<group>"; };
 		09F7E19B2B7A7137000A2C68 /* Otus_Pro_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otus_Pro_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F7E19E2B7A7137000A2C68 /* Otus_Pro_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Otus_Pro_2App.swift; sourceTree = "<group>"; };
 		09F7E1A02B7A7137000A2C68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -166,8 +162,6 @@
 				09F7E1D92B7B9C0D000A2C68 /* SecondView.swift */,
 				09F7E1DB2B7B9C25000A2C68 /* ThirdView.swift */,
 				091B2F1C2BA88B04008AA663 /* RowView.swift */,
-				091B2F1E2BA9743A008AA663 /* WorkingWithAnimation.swift */,
-				091B2F142BA4F46C008AA663 /* WorkingWithAnimation2.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,11 +251,9 @@
 				09F7E19F2B7A7137000A2C68 /* Otus_Pro_2App.swift in Sources */,
 				09F7E1CC2B7B5D93000A2C68 /* ScienceHotNewsView.swift in Sources */,
 				09F7E1B12B7A7B4C000A2C68 /* URLRequestConvertable.swift in Sources */,
-				091B2F1F2BA9743A008AA663 /* WorkingWithAnimation.swift in Sources */,
 				09F7E1D82B7B9BCF000A2C68 /* FirstView.swift in Sources */,
 				09F7E1D02B7B8D19000A2C68 /* DetailView.swift in Sources */,
 				09F7E1B92B7A824D000A2C68 /* EverythingNewsModel.swift in Sources */,
-				091B2F152BA4F46C008AA663 /* WorkingWithAnimation2.swift in Sources */,
 				09F7E1DA2B7B9C0D000A2C68 /* SecondView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

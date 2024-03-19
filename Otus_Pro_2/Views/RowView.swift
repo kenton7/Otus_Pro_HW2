@@ -13,9 +13,9 @@ struct RowView: View {
     var isLast: Bool
     var topic: Topics
     @ObservedObject var viewModel: EverythingNewsViewModel
+    @State private var isLikePressed = false
     
     var body: some View {
-        VStack {
             NavigationLink(value: article) {
                 VStack {
                     AsyncImage(url: URL(string: article.urlToImage ?? "")) { image in
@@ -53,6 +53,24 @@ struct RowView: View {
                         .frame(height: 50)
                 }
             }
+        HStack {
+            Spacer()
+            Button(action: {
+                withAnimation(.easeInOut(duration: 2)) {
+                    isLikePressed.toggle()
+                }
+            }, label: {
+                    Image(systemName: "heart.fill")
+                        .foregroundStyle(.red)
+                        .font(.system(size: 40))
+            })
+            .frame(maxWidth: .infinity)
+            .offset(x: isLikePressed ? 500 : 0, y: isLikePressed ? 400 : 0)
         }
+        .padding()
     }
+}
+
+#Preview {
+    RowView(article: .init(source: nil, author: "asda", title: "sdfsdf", description: "sfsdf", url: nil, urlToImage: nil, publishedAt: nil, content: "sdfsdfsdf"), isLast: false, topic: .science, viewModel: EverythingNewsViewModel())
 }
