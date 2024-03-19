@@ -12,6 +12,8 @@ struct Otus_Pro_2App: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            //Test()
+            //Something()
         }
     }
 }
