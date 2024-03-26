@@ -1,5 +1,5 @@
 //
-//  HotNewsFetcher.swift
+//  HotNewsService.swift
 //  Otus_Pro_2
 //
 //  Created by Илья Кузнецов on 12.02.2024.
@@ -11,10 +11,10 @@ protocol IHotNewsService {
     func getHotNews(in country: String, page: Int, completion: @escaping (Result<EverythingNewsModel, Error>) -> Void)
 }
 
-class HotNewsFetcher: IHotNewsService {
+class HotNewsService: IHotNewsService {
     private let client: RestAPIClient
     
-    init(_ client: RestAPIClient) {
+    init(_ client: RestAPIClient = .init() ) {
         self.client = client
     }
     

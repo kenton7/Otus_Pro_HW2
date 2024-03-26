@@ -12,7 +12,7 @@ protocol IEverythingNewsService {
     func getHotNews(in country: String, page: Int, completion: @escaping (Result<EverythingNewsModel, Error>) -> Void)
 }
 
-class EverythingNewsFetcher: IEverythingNewsService {
+class EverythingNewsService: IEverythingNewsService {
     private let client: RestAPIClient
     
     init(client: RestAPIClient = .init() ) {

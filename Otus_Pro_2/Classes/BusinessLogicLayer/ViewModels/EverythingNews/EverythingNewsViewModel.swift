@@ -14,9 +14,12 @@ final class EverythingNewsViewModel: ObservableObject {
     @Published var scienceNews = [Article]()
     @Published var technologyNews = [Article]()
     let everythingNewsService: IEverythingNewsService
-    
-    init(everythingNewsService: IEverythingNewsService = EverythingNewsFetcher() ) {
+    let hotNewsService: IHotNewsService
+
+    init(everythingNewsService: EverythingNewsService = ServiceLocator.shared.getService(),
+         hotNewsService: HotNewsService = ServiceLocator.shared.getService() ) {
         self.everythingNewsService = everythingNewsService
+        self.hotNewsService = hotNewsService
     }
     
     func getEverythingNews(about: String, page: Int) {
