@@ -26,8 +26,6 @@ enum NewsEndpoints: URLRequestConvertable {
     
     var urlQuery: [String: String] {
         switch self {
-//        case .everything(let about):
-//            return ["q": "\(about)", "apiKey": "\(APIKey.apiKey)"]
         case .everything(let about, let pageSize, let page):
             return ["q": "\(about)", "apiKey": "\(APIKey.apiKey)", "pageSize": "\(pageSize)", "page": "\(page)"]
         case .topHeadlines(let country, let pageSize, let page):

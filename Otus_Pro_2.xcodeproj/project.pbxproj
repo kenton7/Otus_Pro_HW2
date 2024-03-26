@@ -100,6 +100,16 @@
 			path = CoreLayer;
 			sourceTree = "<group>";
 		};
+		09E6B3502BB2CD8700245201 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09F7E19E2B7A7137000A2C68 /* Otus_Pro_2App.swift */,
+				09F7E1A22B7A7139000A2C68 /* Assets.xcassets */,
+				09F7E1AD2B7A7A03000A2C68 /* APIKey.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		09F7E1922B7A7137000A2C68 = {
 			isa = PBXGroup;
 			children = (
@@ -119,11 +129,10 @@
 		09F7E19D2B7A7137000A2C68 /* Otus_Pro_2 */ = {
 			isa = PBXGroup;
 			children = (
+				09E6B3502BB2CD8700245201 /* Supporting Files */,
 				09E6B34F2BB2B68500245201 /* CoreLayer */,
 				09E6B34E2BB2B66100245201 /* PresentationLayer */,
 				09E6B34D2BB2B61E00245201 /* BusinessLogicLayer */,
-				09F7E19E2B7A7137000A2C68 /* Otus_Pro_2App.swift */,
-				09F7E1A22B7A7139000A2C68 /* Assets.xcassets */,
 				09F7E1A42B7A7139000A2C68 /* Preview Content */,
 			);
 			path = Otus_Pro_2;
@@ -140,7 +149,6 @@
 		09F7E1AC2B7A79F2000A2C68 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				09F7E1AD2B7A7A03000A2C68 /* APIKey.swift */,
 				09F7E1B82B7A824D000A2C68 /* EverythingNewsModel.swift */,
 				091B2F162BA75829008AA663 /* Topics.swift */,
 			);
