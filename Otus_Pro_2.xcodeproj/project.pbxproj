@@ -74,16 +74,6 @@
 			path = ServiceLocator;
 			sourceTree = "<group>";
 		};
-		09E6B34C2BB2B60B00245201 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				09E6B34F2BB2B68500245201 /* CoreLayer */,
-				09E6B34E2BB2B66100245201 /* PresentationLayer */,
-				09E6B34D2BB2B61E00245201 /* BusinessLogicLayer */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		09E6B34D2BB2B61E00245201 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,7 +119,9 @@
 		09F7E19D2B7A7137000A2C68 /* Otus_Pro_2 */ = {
 			isa = PBXGroup;
 			children = (
-				09E6B34C2BB2B60B00245201 /* Classes */,
+				09E6B34F2BB2B68500245201 /* CoreLayer */,
+				09E6B34E2BB2B66100245201 /* PresentationLayer */,
+				09E6B34D2BB2B61E00245201 /* BusinessLogicLayer */,
 				09F7E19E2B7A7137000A2C68 /* Otus_Pro_2App.swift */,
 				09F7E1A22B7A7139000A2C68 /* Assets.xcassets */,
 				09F7E1A42B7A7139000A2C68 /* Preview Content */,
