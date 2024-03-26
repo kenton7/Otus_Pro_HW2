@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NetworkError: Error {
+public enum NetworkError: Error {
     case invalidMimeType
     case invalidStatusCode
     case invalidRequest
@@ -18,10 +18,12 @@ enum NetworkError: Error {
     case invalidURL
 }
 
-final class RestAPIClient {
+public final class RestAPIClient {
     private let session: URLSession = .shared
     
-    func performRequest(_ requestConvertable: URLRequestConvertable, completion: @escaping (Result<Data, Error>) -> Void) {
+    public init() {} 
+    
+     public func performRequest(_ requestConvertable: URLRequestConvertable, completion: @escaping (Result<Data, Error>) -> Void) {
         let request: URLRequest
         
         do {

@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum NewsEndpoints: URLRequestConvertable {
+public enum NewsEndpoints: URLRequestConvertable {
     case everything(about: String, pageSize: Int, page: Int)
     case topHeadlines(country: String, pageSize: Int, page: Int)
     
-    var path: String {
+    public var path: String {
         switch self {
         case .everything:
             return "/v2/everything"
@@ -20,11 +20,11 @@ enum NewsEndpoints: URLRequestConvertable {
         }
     }
     
-    var method: HTTPMethod {
+    public var method: HTTPMethod {
         return .get
     }
     
-    var urlQuery: [String: String] {
+    public var urlQuery: [String: String] {
         switch self {
         case .everything(let about, let pageSize, let page):
             return ["q": "\(about)", "apiKey": "8d9c4c6228b646c1a5b58b84c36a6982", "pageSize": "\(pageSize)", "page": "\(page)"]

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLayerPackage
 
 protocol IHotNewsService {
     func getHotNews(in country: String, page: Int, completion: @escaping (Result<EverythingNewsModel, Error>) -> Void)

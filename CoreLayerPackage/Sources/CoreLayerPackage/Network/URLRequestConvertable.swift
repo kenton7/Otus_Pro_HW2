@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum HTTPMethod: String {
+public enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
 }
 
-protocol URLRequestConvertable {
+public protocol URLRequestConvertable {
     var scheme: String { get }
     var host: String { get }
     var path: String { get }
@@ -23,11 +23,11 @@ protocol URLRequestConvertable {
 }
 
 extension URLRequestConvertable {
-    var scheme: String { "https" }
-    var host: String { "newsapi.org" }
-    var urlQuery: [String: String] { [:] }
-    var headers: [String: String] { [:] }
-    var body: [String: Any] { [:] }
+    public var scheme: String { "https" }
+    public var host: String { "newsapi.org" }
+    public var urlQuery: [String: String] { [:] }
+    public var headers: [String: String] { [:] }
+    public var body: [String: Any] { [:] }
     
     func asRequest() throws -> URLRequest {
         var components = URLComponents()
