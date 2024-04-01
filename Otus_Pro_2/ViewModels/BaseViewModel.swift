@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Combine
+import NetworkPackage
 
 final class BaseViewModel {
     

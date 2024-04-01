@@ -16,7 +16,7 @@ public enum Endpoint {
         URL(string: "https://newsapi.org/v2/")!
     }
     
-    var absoluteURL: URL? {
+    public var absoluteURL: URL? {
             let queryURL = baseURL.appendingPathComponent(self.path())
             let components = URLComponents(url: queryURL, resolvingAgainstBaseURL: true)
             guard var urlComponents = components else {
@@ -36,7 +36,7 @@ public enum Endpoint {
             return urlComponents.url
         }
     
-    init?(index: Int) {
+    public init?(index: Int) {
             switch index {
             case 0: self = .everything(about: "technology")
             case 1: self = .topHeadlines(country: "us", category: "science")

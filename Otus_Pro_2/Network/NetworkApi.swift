@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import NetworkPackage
 
 class NetworkApi {
     
@@ -24,7 +25,7 @@ class NetworkApi {
         
         return URLSession.shared.dataTaskPublisher(for: url)
             .map{ $0.data }
-            .decode(type: EverythingNewsModel.self, decoder: APIConstants.jsonDecoder)
+            .decode(type: NewsModel.self, decoder: APIConstants.jsonDecoder)
             .map { $0.articles ?? [] }
             .replaceError(with: [])
             .receive(on: DispatchQueue.main)
