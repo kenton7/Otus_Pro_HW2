@@ -9,23 +9,15 @@ import SwiftUI
 
 struct ScienceHotNewsView: View {
     
-    var hotNews: [Article]?
-    let viewModel: EverythingNewsViewModel
+    @EnvironmentObject var articles: BaseViewModel.ArticlesViewModel
     @State private var path = [Article]()
-    @State private var isTapped = false
     
     var body: some View {
         NavigationStack(path: $path) {
             VStack {
                 List {
-                    if let hotNews = hotNews {
-                        ForEach(0..<hotNews.count, id: \.self) { i in
-                            if i == hotNews.count - 1 {
-                                RowView(article: hotNews[i], isLast: true, topic: .science, viewModel: self.viewModel)
-                            } else {
-                                RowView(article: hotNews[i], isLast: false, topic: .science, viewModel: self.viewModel)
-                            }
-                        }
+                    ForEach(articles.scienceNews, id: \.self) { article in
+                        RowView(article: article)
                     }
                 }
                 .listStyle(.plain)

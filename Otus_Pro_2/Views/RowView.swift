@@ -10,9 +10,6 @@ import SwiftUI
 struct RowView: View {
     
     var article: Article
-    var isLast: Bool
-    var topic: Topics
-    @ObservedObject var viewModel: EverythingNewsViewModel
     @State private var isLikePressed = false
     
     var body: some View {
@@ -33,22 +30,9 @@ struct RowView: View {
                         .lineLimit(6)
                         .padding()
                     
-                    if self.isLast {
-                        Text(article.description ?? "")
-                            .font(.system(.subheadline, design: .rounded))
-                            .onAppear {
-                                if self.topic == .technology {
-                                    print("TECHNOLOGY PAGE: \(viewModel.technologyPage)")
-                                    self.viewModel.getEverythingNews(about: "technology", page: viewModel.technologyPage)
-                                } else {
-                                    print("SCIENCE PAGE: \(viewModel.sciencePage)")
-                                    self.viewModel.getHotNews(in: "US", page: viewModel.sciencePage)
-                                }
-                            }
-                    } else {
-                        Text(article.description ?? "")
-                            .font(.system(.subheadline, design: .rounded))
-                    }
+                    
+                    Text(article.description ?? "")
+                        .font(.system(.subheadline, design: .rounded))
                     Spacer()
                         .frame(height: 50)
                 }
@@ -71,6 +55,6 @@ struct RowView: View {
     }
 }
 
-#Preview {
-    RowView(article: .init(source: nil, author: "asda", title: "sdfsdf", description: "sfsdf", url: nil, urlToImage: nil, publishedAt: nil, content: "sdfsdfsdf"), isLast: false, topic: .science, viewModel: EverythingNewsViewModel())
-}
+//#Preview {
+//    RowView(article: .init(source: nil, author: "asda", title: "sdfsdf", description: "sfsdf", url: nil, urlToImage: nil, publishedAt: nil, content: "sdfsdfsdf"), isLast: false, topic: .science, viewModel: EverythingNewsViewModel())
+//}

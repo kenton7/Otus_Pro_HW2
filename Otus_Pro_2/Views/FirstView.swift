@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FirstView: View {
     
+    @EnvironmentObject var viewModel: BaseViewModel.ArticlesViewModel
     var article: Article
     @Binding var path: [Article]
     

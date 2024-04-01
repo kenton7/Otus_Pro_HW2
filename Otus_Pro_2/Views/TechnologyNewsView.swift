@@ -8,22 +8,14 @@
 import SwiftUI
 
 struct TechnologyNewsView: View {
-    
-    let news: [Article]?
-    let viewModel: EverythingNewsViewModel
     @State private var path = [Article]()
+    @EnvironmentObject var articles: BaseViewModel.ArticlesViewModel
     
     var body: some View {
         NavigationStack(path: $path) {
             List {
-                if let news = news {
-                    ForEach(0..<news.count, id: \.self) { i in
-                        if i == news.count - 1 {
-                            RowView(article: news[i], isLast: true, topic: .technology, viewModel: self.viewModel)
-                        } else {
-                            RowView(article: news[i], isLast: false, topic: .technology, viewModel: self.viewModel)
-                        }
-                    }
+                ForEach(articles.technologyNews, id: \.self) { article in
+                    RowView(article: article)
                 }
             }
             .listStyle(.plain)

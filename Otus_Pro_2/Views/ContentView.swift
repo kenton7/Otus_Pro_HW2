@@ -10,8 +10,7 @@ import SwiftUI
 struct ContentView: View {
 
     @State private var tabSelectedValue = 0
-    @ObservedObject private var everythingNewsViewModel = EverythingNewsViewModel()
-    @State private var path = [Article]()
+    @EnvironmentObject var articlesViewModel: BaseViewModel.ArticlesViewModel
     
     var body: some View {
         NavigationStack {
@@ -23,17 +22,15 @@ struct ContentView: View {
                 .pickerStyle(SegmentedPickerStyle())
                 .padding()
                 TabView(selection: $tabSelectedValue) {
-                    TechnologyNewsView(news: everythingNewsViewModel.technologyNews, viewModel: everythingNewsViewModel).tag(0)
-                    ScienceHotNewsView(hotNews: everythingNewsViewModel.scienceNews, viewModel: everythingNewsViewModel).tag(1)
+                    TechnologyNewsView().tag(0)
+                    ScienceHotNewsView().tag(1)
                 }.tabViewStyle(.page(indexDisplayMode: .never))
             }
             .animation(.easeIn, value: tabSelectedValue)
         }
         .onAppear {
-            print("TECHNOLOGY PAGE: \(everythingNewsViewModel.technologyPage)")
-            everythingNewsViewModel.getEverythingNews(about: "technology", page: everythingNewsViewModel.technologyPage)
-            print("SCIENCE PAGE: \(everythingNewsViewModel.sciencePage)")
-            everythingNewsViewModel.getHotNews(in: "us", page: everythingNewsViewModel.sciencePage)
+            articlesViewModel.getTechnologyNews()
+            articlesViewModel.getScienceNews()
         }
     }
 }

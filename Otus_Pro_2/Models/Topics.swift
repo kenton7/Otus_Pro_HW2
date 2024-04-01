@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Topics {
+enum Topics: String {
     case science
     case technology
 }

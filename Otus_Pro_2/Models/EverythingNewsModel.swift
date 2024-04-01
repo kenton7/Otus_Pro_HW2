@@ -21,7 +21,7 @@ struct EverythingNewsModel: Codable, EverythingNewsProtocol, Hashable {
 }
 
 // MARK: - Article
-struct Article: Codable, Hashable {
+public struct Article: Codable, Hashable {
     let source: Source?
     let author: String?
     let title, description: String?

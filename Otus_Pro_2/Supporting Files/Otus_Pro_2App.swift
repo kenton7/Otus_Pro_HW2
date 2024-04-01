@@ -9,11 +9,13 @@ import SwiftUI
 
 @main
 struct Otus_Pro_2App: App {
+    
+    @StateObject var viewModel = BaseViewModel.ArticlesViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-            //Test()
-            //Something()
+                .environmentObject(viewModel)
         }
     }
 }
