@@ -7,21 +7,21 @@
 
 import Foundation
 
-protocol EverythingNewsProtocol {
+protocol NewsProtocol {
     var status: String? { get }
     var totalResults: Int? { get }
     var articles: [Article]? { get }
 }
 
 // MARK: - EverythingNewsModel
-struct EverythingNewsModel: Codable, EverythingNewsProtocol, Hashable {
+struct NewsModel: Codable, NewsProtocol, Hashable {
     let status: String?
     let totalResults: Int?
     let articles: [Article]?
 }
 
 // MARK: - Article
-public struct Article: Codable, Hashable {
+struct Article: Codable, Hashable {
     let source: Source?
     let author: String?
     let title, description: String?
